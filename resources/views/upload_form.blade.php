@@ -14,7 +14,7 @@
 >
 	@csrf
 	<input type="file" name="image[]" accept="image/png, image/jpeg" multiple>
-	<input type="submit" value="Upload">
+	<input type="submit" value="Upload"　onclick="disabled = true;">
     <p></p>
     <textarea name='title'></textarea>
 </form>

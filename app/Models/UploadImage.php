@@ -15,5 +15,5 @@ class UploadImage extends Model
     //fillable で指定したカラムのみ扱えるようになる。
     //create() update() fill() などが使えるようになる。
     
-    protected $fillable = ["file_name", "file_path", "file_id", "title"];
+    protected $fillable = ["file_name", "file_path", "file_id", "title", "file_id", "created_at"];
 }
