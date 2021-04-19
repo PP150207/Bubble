@@ -11,6 +11,8 @@ class UploadImageController extends Controller
 		
 		$upload_images = $request->file('image');
 		$count_image = 0;
+        var_dump($upload_images);
+        var_dump($request->title);
 
 		foreach($upload_images as $upload_image){
 			$path = $upload_image->store('uploads',"public");
@@ -18,11 +20,11 @@ class UploadImageController extends Controller
 			UploadImage::create([
 				"file_name" => $upload_image->getClientOriginalName(),
 				"file_path" => $path,
-				"file_id" => $count_image
-
+				"file_id" => $count_image,
+                "title" => $request->title
 			]);
 		}
 		
-		return redirect("/form");
+		return redirect("/list");
 	}
 }

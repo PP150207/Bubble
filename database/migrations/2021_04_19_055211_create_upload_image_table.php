@@ -19,6 +19,7 @@ class CreateUploadImageTable extends Migration
             $table->string("file_name");
 			$table->string("file_path");
             $table->integer("file_id")->default(0);
+            $table->longtext("title")->nullable();
         });
     }
 
