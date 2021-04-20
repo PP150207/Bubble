@@ -1,4 +1,8 @@
-/* コンテンツページのCSS */
+/* コンテンツページ */
+.content-title{
+    text-align: center;
+}
+
 .top-content{
     text-align: center;
     display: flex;

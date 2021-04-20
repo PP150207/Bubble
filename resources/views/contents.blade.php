@@ -8,16 +8,21 @@
 </head>
 <body>
 <div >
-	<div class='top-content'>
-		@foreach($contents as $content)
-		<div>
-		<div class='content-list'></div>
-		<img src="{{ Storage::url($content->file_path) }}"  id='item'/>	
-		</div>
-		@endforeach
-	</div>
 	<div>
-		<p class='hoge'>{{ $content->title }}</p>
+		<div class='content-title'>
+			<h1>図書館の大魔術師</h1>
+		</div>
+		<div class='top-content'>
+			@foreach($contents as $content)
+			<div>
+				<div class='content-list'></div>
+				<img src="{{ Storage::url($content->file_path) }}"  id='item'/>	
+			</div>
+			@endforeach
+		</div>
+		<div>
+			<p class='hoge'>{{ $content->title }}</p>
+		</div>
 	</div>
 </div>
 
