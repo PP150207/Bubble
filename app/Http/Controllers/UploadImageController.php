@@ -22,7 +22,9 @@ class UploadImageController extends Controller
 				"file_name" => $upload_image->getClientOriginalName(),
 				"file_path" => $path,
 				"file_id" => $count_image,
-                "title" => $request->title
+                "title" => $request->title,
+                "image_title" =>$request->image
+
 			]);
 		}
 		

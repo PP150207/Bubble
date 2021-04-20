@@ -9,9 +9,12 @@
 <body>
 <div >
 	<div>
-		<div class='content-title'>
-			<h1>図書館の大魔術師</h1>
-		</div>
+		<div class='title-content'>
+			@foreach($contents as $content)
+			<h1>{{ $content->image_title }}</h1>
+			@break
+			@endforeach
+		</div>	
 		<div class='top-content'>
 			@foreach($contents as $content)
 			<div>
@@ -21,10 +24,11 @@
 			@endforeach
 		</div>
 		<div>
-			<p class='hoge'>{{ $content->title }}</p>
+			<p>{{ $content->title }}</p>
 		</div>
 	</div>
 </div>
 
 </body>
 </html>
+
