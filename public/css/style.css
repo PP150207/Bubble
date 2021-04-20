@@ -1,3 +1,8 @@
+/* フォーム */
+#textform{
+    white-space: pre-wrap;
+}
+
 /* コンテンツページ */
 .title-content{
     text-align: center;
@@ -10,6 +15,15 @@
 }
 
 #item{
-    width: 90vw;
+    height: 540px;
     padding:1vw;
+}
+
+/* タイムライン */
+.timeline{
+    text-align: center;
+}
+
+#items{
+    width: 90vw;
 }

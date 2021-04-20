@@ -9,18 +9,15 @@
 </head>
 <body>
 <a href="{{ route('upload_form') }}">Upload</a>
+<a href="{{ route('home') }}">Home</a>
 <hr />
-
-@foreach($images as $image)
-	<div>
-		<a href='/list/{{$image->id}}'><img src="{{ Storage::url($image->file_path) }}" /></a>
-		<p>{{ $image->title }}</p>
-	</div>
-@endforeach
-
 <div>
-
+	@foreach($images as $image)
+		<div class='timeline'>
+			<a href='/list/{{$image->id}}'><img src="{{ Storage::url($image->file_path) }}" id='items'/></a>
+			<p>{{ $image->title }}</p>
+		</div>
+	@endforeach
 </div>
-
 </body>
 </html>

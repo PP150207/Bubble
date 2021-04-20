@@ -23,7 +23,7 @@ class UploadImageController extends Controller
 				"file_path" => $path,
 				"file_id" => $count_image,
                 "title" => $request->title,
-                "image_title" =>$request->image
+                "image_title" =>$request->image_title
 
 			]);
 		}
@@ -50,6 +50,10 @@ class UploadImageController extends Controller
         $uploads = UploadImage::orderBy("id", "desc")->where("file_id", 1) ->get();
 
         return view('image_list',['images' => $uploads]);
+    }
+
+    function home() {
+        return view('home');
     }
 
 }

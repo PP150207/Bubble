@@ -27,7 +27,7 @@
     <p></p>
 	<input type='text' name="image_title" placeholder='漫画のタイトル'>
 	<p></p>
-    <textarea name='title'>discription</textarea>
+    <textarea name='title' id='textform'>discription</textarea>
 </form>
 
 </body>
