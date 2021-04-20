@@ -4,8 +4,13 @@
 }
 
 /* コンテンツページ */
-.title-content{
+.top-wrapper{
     text-align: center;
+}
+
+.title-content h1{
+    margin: 0;
+    padding-bottom: 0;
 }
 
 .top-content{
@@ -15,8 +20,13 @@
 }
 
 #item{
-    height: 540px;
-    padding:1vw;
+    /* height: 520px; */
+    /* margin-left: 2vw; */
+
+    width: 85vw;
+    padding:5vw;
+    padding-top: 10px;
+
 }
 
 /* タイムライン */
@@ -26,4 +36,12 @@
 
 #items{
     width: 90vw;
+    margin-bottom: 0;
+}
+
+.timeline p{
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #e2dcdc;
 }

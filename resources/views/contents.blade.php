@@ -8,7 +8,7 @@
 </head>
 <body>
 <div >
-	<div>
+	<div class='top-wrapper'>
 		<div class='title-content'>
 			@foreach($contents as $content)
 			<h1>{{ $content->image_title }}</h1>
