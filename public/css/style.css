@@ -1,0 +1,11 @@
+/* コンテンツページのCSS */
+.top-content{
+    text-align: center;
+    display: flex;
+    overflow-x:scroll;
+}
+
+#item{
+    width: 90vw;
+    padding:1vw;
+}
