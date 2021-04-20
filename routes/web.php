@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[App\Http\Controllers\UploadImageController::class, "show"])
 ->name("upload_form");
 
-Route::get('/home',[App\Http\Controllers\UploadImageController::class, "home"])
+Route::get('/home',[App\Http\Controllers\ImageListController::class, "home"])
 ->name("home");
 
 Route::post('/upload', [App\Http\Controllers\UploadImageController::class, "upload"])

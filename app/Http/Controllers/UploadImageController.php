@@ -12,8 +12,8 @@ class UploadImageController extends Controller
 		
 		$upload_images = $request->file('image');
 		$count_image = 0;
-        var_dump($upload_images);
-        var_dump($request->title);
+        // var_dump($upload_images);
+        // var_dump($request->title);
 
 		foreach($upload_images as $upload_image){
 			$path = $upload_image->store('uploads',"public");
@@ -50,10 +50,6 @@ class UploadImageController extends Controller
         $uploads = UploadImage::orderBy("id", "desc")->where("file_id", 1) ->get();
 
         return view('image_list',['images' => $uploads]);
-    }
-
-    function home() {
-        return view('home');
     }
 
 }
