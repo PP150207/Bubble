@@ -31,7 +31,7 @@ class ContentController extends Controller
         
 
         $delete = new Edit;
-        var_dump($delete_create_time);
+        // var_dump($delete_create_time);
         $values = $delete::where('created_at', $delete_create_time)->get();
         $cnt = count($values, COUNT_RECURSIVE);
 
