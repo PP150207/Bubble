@@ -8,9 +8,12 @@
 	<title>Document</title>
 </head>
 <body>
-<a href="{{ route('upload_form') }}">Upload</a>
-<a href="{{ route('home') }}">Home</a>
-<hr />
+<header>
+	<a href="{{ route('upload_form') }}" class='left-item'>Upload</a>
+	<a href="/home" class='center-item'>Home</a>
+	<a href="{{ route('my') }}" class='right-item'>My</a>
+</header>
+<div class='under-the-grid'></div>
 <div>
 	@foreach($images as $image)
 		<div class='timeline'>

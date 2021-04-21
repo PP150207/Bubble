@@ -19,10 +19,15 @@
 	<p></p>
     <textarea name='title' id='textform'>{{ $image->title }}</textarea>
 	<p></p>
-    <input type='text' name='created_at' value='{{ $image->created_at }}'>
+    <input type='hidden' name='created_at' value='{{ $image->created_at }}'>
 	<input type="submit" value="Update">
 	<p></p>
 	<a href="/home">Home</a>
+</form>
+<form action='{{ route('delete') }}' method='post'>
+    @csrf
+    <input type="hidden" name='id' value='{{ $image->created_at }}'>
+    <input type='submit' value='削除'>
 </form>
 </body>
 </html>

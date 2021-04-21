@@ -8,10 +8,13 @@
 	<title>Document</title>
 </head>
 <body>
-<header>
-	<a href="{{ route('home') }}">Home</a>
-	<a href="{{ route('my') }}">My</a>
+	
+<header class='titlebar'>
+	<a href='#'class='left-item' id='white'>left</a>
+	<a href="{{ route('home') }}" class='center-item'>Home</a>
+	<a href="{{ route('my') }}" class='right-item'>My</a>
 </header>
+
 <div class='under-the-grid'></div>
 
 @if (count($errors) > 0)

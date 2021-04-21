@@ -8,15 +8,36 @@ header{
     position: fixed;
     top: 0;
     background-color: white;
-    width: 98vw;
-    text-align: center;
-    display: block;
+    width: 96vw;
     padding-top: 15px;
     padding-bottom: 0;
+    display: table;
 }
-header p {
-    display: inline-block;
+
+.left-item{
+    display: table-cell;
+    text-align: left;
+    width: 31vw;
 }
+
+.center-item{
+    display: table-cell;
+    text-align: center;
+    width: 33vw;
+}
+
+.right-item{
+    display: table-cell;
+    text-align: right;
+    width: 33vw;
+}
+
+#white{
+    color: white;
+}
+
+
+
 
 /* フォーム */
 #textform{
@@ -30,7 +51,7 @@ header p {
 
 .title-content h1{
     margin: 0;
-    padding-bottom: 0;
+    padding-top: 10px;
 }
 
 .top-content{
