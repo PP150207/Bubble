@@ -49,4 +49,8 @@ class UploadImageController extends Controller
         return view('image_list',['images' => $uploads]);
     }
 
+    function my(){
+        return view('my');
+    }
+
 }

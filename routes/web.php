@@ -41,4 +41,7 @@ Route::post('/editcontens', [App\Http\Controllers\ContentController::class, "edi
 Route::get('/edit/{created_at}', [App\Http\Controllers\ContentController::class, "edit"])
 ->name('edit');
 
+Route::get('/my',[App\Http\Controllers\UploadImageController::class, "my"])
+->name("my");
+
 

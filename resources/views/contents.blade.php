@@ -24,9 +24,9 @@
 			@endforeach
 		</div>
 		<div>
-			<p>{{ $content->title }}</p>
-			<a href='/edit/{{$content->created_at}}'>{{ $content->title }}</a>
+			<p><a href='/edit/{{$content->created_at}}'>{{ $content->title }}</a></p>
 		</div>
+		<a href='/home'>Home</a>
 		<form action='{{ route('delete') }}' method='post'>
 			@csrf
 			<input type='hidden' name='id' value='{{ $content->created_at }}'>
