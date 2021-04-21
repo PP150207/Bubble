@@ -9,7 +9,8 @@
 </head>
 <body>
 <a href="{{ route('upload_form') }}">Upload</a>
-<a href="{{ route('home') }}">Home</a>
+<a href="{{ route('image_list') }}">List</a>
+
 <hr />
 <div class='grid'>
 	@foreach($images as $image)

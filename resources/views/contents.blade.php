@@ -26,6 +26,14 @@
 		<div>
 			<p>{{ $content->title }}</p>
 		</div>
+		<form action='{{ route('delete') }}' method='post'>
+			@csrf
+			<input type='text' name='id' value='{{ $content->created_at }}'><br>
+			タイトル:{{ $content->title }}<br>
+			説明:{{ $content->image_title }}<br>
+			ID:{{ $content->id }}
+			<input type='submit' value='削除'>
+		</form>
 	</div>
 </div>
 

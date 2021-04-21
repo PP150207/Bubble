@@ -23,9 +23,9 @@
 >
 	@csrf
 	<input type="file" name="image[]" accept="image/png, image/jpeg" multiple>
-	<input type="submit" value="Upload"　onclick="disabled = true;">
+	<input type="submit" value="Upload">
     <p></p>
-	<input type='text' name="image_title" placeholder='漫画のタイトル'>
+	<input type='text' name="image_title" placeholder='漫画のタイトル'  >
 	<p></p>
     <textarea name='title' id='textform'>discription</textarea>
 </form>
