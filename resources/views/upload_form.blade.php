@@ -23,11 +23,14 @@
 >
 	@csrf
 	<input type="file" name="image[]" accept="image/png, image/jpeg" multiple>
-	<input type="submit" value="Upload">
     <p></p>
-	<input type='text' name="image_title" placeholder='漫画のタイトル'  >
+	<input type='text' name="image_title" placeholder='タイトル'>
 	<p></p>
-    <textarea name='title' id='textform'>discription</textarea>
+    <textarea name='title' id='textform' placeholder='サブタイトル'></textarea>
+	<p></p>
+	<input type="submit" value="Upload">
+	<p></p>
+	<a href="/home">Home</a>
 </form>
 
 </body>
