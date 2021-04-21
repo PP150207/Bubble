@@ -12,8 +12,8 @@ class UploadImageController extends Controller
 		
 		$upload_images = $request->file('image');
 		$count_image = 0;
-        var_dump($upload_images);
-        var_dump($request->title);
+        // var_dump($upload_images);
+        // var_dump($request->title);
 
 		foreach($upload_images as $upload_image){
 			$path = $upload_image->store('uploads',"public");
@@ -38,9 +38,6 @@ class UploadImageController extends Controller
         foreach($createtimes as $createtime)
             $time = $createtime->created_at;
 
-        // var_dump($sum);
-
-
         $id_image = UploadImage::where("created_at",$time )->get();
         // var_dump($id_image);
         return view('contents',['contents' => $id_image]);
@@ -52,8 +49,8 @@ class UploadImageController extends Controller
         return view('image_list',['images' => $uploads]);
     }
 
-    function home() {
-        return view('home');
+    function my(){
+        return view('my');
     }
 
 }

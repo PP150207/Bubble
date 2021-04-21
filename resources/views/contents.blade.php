@@ -11,7 +11,7 @@
 	<div class='top-wrapper'>
 		<div class='title-content'>
 			@foreach($contents as $content)
-			<h1>{{ $content->image_title }}</h1>
+			<h1><a href='/edit/{{$content->created_at}}'>{{ $content->image_title }}</a></h1>
 			@break
 			@endforeach
 		</div>	
@@ -24,8 +24,18 @@
 			@endforeach
 		</div>
 		<div>
-			<p>{{ $content->title }}</p>
+			<p><a href='/edit/{{$content->created_at}}'>{{ $content->title }}</a></p>
 		</div>
+		<a href='/home'>Home</a>
+		<form action='{{ route('delete') }}' method='post'>
+			@csrf
+			<input type='hidden' name='id' value='{{ $content->created_at }}'>
+			<input type='submit' value='削除'>
+		</form>
+		<p></p>
+
+		
+
 	</div>
 </div>
 

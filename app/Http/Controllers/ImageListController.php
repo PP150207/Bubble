@@ -11,4 +11,10 @@ class ImageListController extends Controller
 
         return view('image_list',['images' => $uploads]);
     }
+
+    function home() {
+        $uploadslist = UploadImage::orderBy("id", "desc")->where("file_id", 1) ->get();
+
+        return view('home',['images' => $uploadslist]);
+    }
 }

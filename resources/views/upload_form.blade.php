@@ -4,9 +4,16 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 	<title>Document</title>
 </head>
 <body>
+<header>
+	<a href="{{ route('home') }}">Home</a>
+	<a href="{{ route('my') }}">My</a>
+</header>
+<div class='under-the-grid'></div>
+
 @if (count($errors) > 0)
 <div class="alert alert-danger">
 	<ul>
@@ -23,11 +30,12 @@
 >
 	@csrf
 	<input type="file" name="image[]" accept="image/png, image/jpeg" multiple>
-	<input type="submit" value="Upload"　onclick="disabled = true;">
     <p></p>
-	<input type='text' name="image_title" placeholder='漫画のタイトル'>
+	<input type='text' name="image_title" placeholder='タイトル'>
 	<p></p>
-    <textarea name='title' id='textform'>discription</textarea>
+    <textarea name='title' id='textform' placeholder='サブタイトル'></textarea>
+	<p></p>
+	<input type="submit" value="Upload">
 </form>
 
 </body>
