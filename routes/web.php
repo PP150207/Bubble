@@ -33,3 +33,11 @@ Route::get('/list/{id}',[App\Http\Controllers\UploadImageController::class, "con
 
 Route::post('/delete', [App\Http\Controllers\ContentController::class, "delete"])
 ->name('delete');
+
+Route::post('/editcontens', [App\Http\Controllers\ContentController::class, "edit_contents"])
+->name('edit_contents');
+
+Route::get('/edit/{created_at}', [App\Http\Controllers\ContentController::class, "edit"])
+->name('edit');
+
+

@@ -11,5 +11,5 @@ class Edit extends Model
 
     protected $table = "upload_image";
 
-    protected $fillable = ["created_at"];
+    protected $fillable = ["created_at", "title", "image_title"];
 }

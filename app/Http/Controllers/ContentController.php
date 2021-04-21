@@ -7,6 +7,20 @@ use Illuminate\Support\Facades\Storage;
 
 class ContentController extends Controller
 {
+    function edit(Request $request) {
+        $edits = Edit::where("created_at", $request->created_at) ->get();
+    
+        return view('edit_image',['images' => $edits]);
+    
+    }
+
+    function edit_contents(Request $request){
+        Edit::where('created_at', $request->created_at)->update(['title'=> $request->title]);
+        Edit::where('created_at', $request->created_at)->update(['image_title'=> $request->image_title]);
+        return redirect('/home');
+    }
+
+
     function delete(Request $request) {
         
         $delete_create_time  = $request->id;
