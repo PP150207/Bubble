@@ -29,7 +29,8 @@ Route::post('/upload', [App\Http\Controllers\UploadImageController::class, "uplo
 Route::get('/list', [App\Http\Controllers\ImageListController::class, "index"])
 ->name("image_list");
 
-Route::get('/list/{id}',[App\Http\Controllers\UploadImageController::class, "contentview"]);
+Route::get('/list/{id}',[App\Http\Controllers\UploadImageController::class, "contentview"])
+->name('contents_view');
 
 Route::post('/delete', [App\Http\Controllers\ContentController::class, "delete"])
 ->name('delete');

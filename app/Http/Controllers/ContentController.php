@@ -17,7 +17,13 @@ class ContentController extends Controller
     function edit_contents(Request $request){
         Edit::where('created_at', $request->created_at)->update(['title'=> $request->title]);
         Edit::where('created_at', $request->created_at)->update(['image_title'=> $request->image_title]);
-        return redirect('/home');
+
+        $return_id =  Edit::where('created_at', $request->created_at)->first();
+        var_dump($return_id->id);
+
+
+        return redirect(route('contents_view', ['id'=> $return_id->id,]));
+        return redirect(route('user.index', ['user_id' => 1,]));
     }
 
 
