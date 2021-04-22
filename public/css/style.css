@@ -4,24 +4,103 @@ a{
     color: black;
 }
 
+/* ヘッダー */
 header{
     position: fixed;
     top: 0;
     background-color: white;
-    width: 98vw;
-    text-align: center;
-    display: block;
+    width: 96vw;
     padding-top: 15px;
     padding-bottom: 0;
-}
-header p {
-    display: inline-block;
+    display: table;
 }
 
-/* フォーム */
-#textform{
-    white-space: pre-wrap;
+.left-item{
+    display: table-cell;
+    text-align: left;
+    width: 32vw;
 }
+
+.center-item{
+    display: table-cell;
+    text-align: center;
+    width: 32vw;
+}
+
+.right-item{
+    display: table-cell;
+    text-align: right;
+    width: 33vw;
+}
+
+#white{
+    color: white;
+}
+
+
+
+
+/* フォーム */
+.space{
+    width: 100%;
+    height: 30px;
+}
+
+.upload-form{
+    background-image: url('/../images/backgroundimg2.jpg');
+    background-size: contain;
+    background-size:auto 320px;
+    height: 320px;
+}
+
+.form-flex{
+    display: flex;
+}
+
+.upload-file{
+    display: none;
+}
+
+label{
+    margin-bottom: 90px;
+    width: 57px;
+    cursor: pointer;
+}
+
+.upload-title{ 
+    width: 1rem;
+    margin-left: 25px;
+    margin-right: 218px;
+    height: 16rem;
+    padding-right: 28px;
+    padding-left: 20px;
+    margin-top: 20;
+    font-size: 24px;
+    background-color:transparent;
+    resize: none;
+    outline: none;
+    border: none;
+}
+
+.upload-subtitle{
+    margin-top: 10px;
+    width: 90vw;
+    margin-left: 3vw;
+    outline: none;
+    border: none;
+    resize: none;
+    border-bottom: solid 1px gray;
+    border-radius: 0;
+    font-size: 16px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.upload-submit{
+    float: right;
+}
+
+
 
 /* コンテンツページ */
 .top-wrapper{
@@ -30,7 +109,7 @@ header p {
 
 .title-content h1{
     margin: 0;
-    padding-bottom: 0;
+    padding-top: 10px;
 }
 
 .top-content{
@@ -40,13 +119,10 @@ header p {
 }
 
 #item{
-    /* height: 520px; */
-    /* margin-left: 2vw; */
 
     width: 85vw;
     padding:3vw;
     padding-top: 10px;
-
 }
 
 /* タイムライン */
@@ -87,3 +163,63 @@ body{
     width: 100%;
     height:180px;
 }
+
+.grid-title{
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 編集画面 */
+
+.edit-title,
+.edit-subtitle {
+    border-top:white;
+    border-right: white;
+    border-left: white;
+    border-radius: 0;
+    outline: none;
+    resize: none;
+}
+
+.edit-title{
+    height: 50px;
+    text-align: center;
+    font-size: 40px;
+    width: 350px;
+    border-bottom: solid 0.8px gray;
+}
+
+
+.edit-subtitle{
+    font-size: 16px;
+    width: 380px;
+    border-bottom: white;
+}
+
+#edit-item{
+    width: 90vw;
+    margin-top: 10px;
+    margin: 2vw 4vw;
+}
+
+.edit-submit,
+.edit-delete,
+.upload-submit
+{
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    -webkit-appearance: none;
+    padding: 5px 20px;
+}
+
+.edit-submit{
+    text-align: center;
+
+}
+
+.edit-delete{
+    text-align: right;
+}
+

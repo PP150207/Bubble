@@ -31,7 +31,7 @@ class ContentController extends Controller
         
 
         $delete = new Edit;
-        var_dump($delete_create_time);
+        // var_dump($delete_create_time);
         $values = $delete::where('created_at', $delete_create_time)->get();
         $cnt = count($values, COUNT_RECURSIVE);
 
@@ -45,7 +45,7 @@ class ContentController extends Controller
             $values = $delete::where('created_at', $delete_create_time)->get();
             foreach($values as $value) {
                 $delete_file_path = $value->file_path;
-                var_dump($delete_file_path);
+                // var_dump($delete_file_path);
                 Storage::delete("public/$delete_file_path");
                 $value->delete();
             }
