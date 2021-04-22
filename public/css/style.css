@@ -67,18 +67,8 @@ label{
     cursor: pointer;
 }
 
-
-.upload-title,
-.upload-subtitle{
-    width: 1rem;
-    resize: none;
-    display: inline-block;
-    outline: none;
-    border: none;
-}
-
-
 .upload-title{ 
+    width: 1rem;
     margin-left: 25px;
     margin-right: 218px;
     height: 16rem;
@@ -87,13 +77,28 @@ label{
     margin-top: 20;
     font-size: 24px;
     background-color:transparent;
+    resize: none;
+    outline: none;
+    border: none;
 }
-/*
+
 .upload-subtitle{
-    width: 2rem;
-    height: 12rem;
-    margin-bottom: 70px;
-} */
+    margin-top: 10px;
+    width: 90vw;
+    margin-left: 3vw;
+    outline: none;
+    border: none;
+    resize: none;
+    border-bottom: solid 1px gray;
+    border-radius: 0;
+    font-size: 16px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.upload-submit{
+    float: right;
+}
 
 
 
@@ -114,13 +119,10 @@ label{
 }
 
 #item{
-    /* height: 520px; */
-    /* margin-left: 2vw; */
 
     width: 85vw;
     padding:3vw;
     padding-top: 10px;
-
 }
 
 /* タイムライン */
@@ -203,7 +205,7 @@ body{
 
 .edit-submit,
 .edit-delete,
-.upload-submit,
+.upload-submit
 {
     background-color: white;
     border-radius: 20px;
