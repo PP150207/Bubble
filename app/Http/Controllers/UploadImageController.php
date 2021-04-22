@@ -50,7 +50,7 @@ class UploadImageController extends Controller
     }
 
     function my(){
-        return view('my');
+        return redirect('https://alu.jp/user/h1gNeWiSHYUAvj3JPYM8J4QDDA52/shelf/ULt2RM7nfGRvmSlIWRg4', 302);
     }
 
 }
