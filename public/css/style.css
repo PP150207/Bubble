@@ -18,13 +18,13 @@ header{
 .left-item{
     display: table-cell;
     text-align: left;
-    width: 31vw;
+    width: 32vw;
 }
 
 .center-item{
     display: table-cell;
     text-align: center;
-    width: 33vw;
+    width: 32vw;
 }
 
 .right-item{
@@ -41,9 +41,61 @@ header{
 
 
 /* フォーム */
-#textform{
-    white-space: pre-wrap;
+.space{
+    width: 100%;
+    height: 30px;
 }
+
+.upload-form{
+    background-image: url('/../images/backgroundimg2.jpg');
+    background-size: contain;
+    background-size:auto 320px;
+    height: 320px;
+}
+
+.form-flex{
+    display: flex;
+}
+
+.upload-file{
+    display: none;
+}
+
+label{
+    margin-bottom: 90px;
+    width: 57px;
+    cursor: pointer;
+}
+
+
+.upload-title,
+.upload-subtitle{
+    width: 1rem;
+    resize: none;
+    display: inline-block;
+    outline: none;
+    border: none;
+}
+
+
+.upload-title{ 
+    margin-left: 25px;
+    margin-right: 218px;
+    height: 16rem;
+    padding-right: 28px;
+    padding-left: 20px;
+    margin-top: 20;
+    font-size: 24px;
+    background-color:transparent;
+}
+/*
+.upload-subtitle{
+    width: 2rem;
+    height: 12rem;
+    margin-bottom: 70px;
+} */
+
+
 
 /* コンテンツページ */
 .top-wrapper{
@@ -110,6 +162,12 @@ body{
     height:180px;
 }
 
+.grid-title{
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 /* 編集画面 */
 
 .edit-title,
@@ -144,7 +202,9 @@ body{
 }
 
 .edit-submit,
-.edit-delete{
+.edit-delete,
+.upload-submit,
+{
     background-color: white;
     border-radius: 20px;
     text-decoration: none;
@@ -160,3 +220,4 @@ body{
 .edit-delete{
     text-align: right;
 }
+
