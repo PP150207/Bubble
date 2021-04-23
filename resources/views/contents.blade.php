@@ -19,7 +19,7 @@
 			@foreach($contents as $content)
 			<div>
 				<div class='content-list'></div>
-				<img src="data:image/png;base64,{{ $image->image }}" id='item' />
+				<img src="data:image/png;base64,{{ $content->image }}" id='item' />
 			</div>
 			@endforeach
 		</div>
