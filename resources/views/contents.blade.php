@@ -11,7 +11,7 @@
 	<div class='top-wrapper'>
 		<div class='title-content'>
 			@foreach($contents as $content)
-			<h1><a href='/home'>{{ $content->image_title }}</a></h1>
+			<h1><a href='/'>{{ $content->image_title }}</a></h1>
 			@break
 			@endforeach
 		</div>	

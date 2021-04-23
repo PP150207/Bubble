@@ -10,8 +10,8 @@
 <body>
 
 <header>
-	<a href="{{ route('upload_form') }}" class='left-item'>Upload</a>
-	<a href="/home" class='center-item'>Home</a>
+	<a href="{{ route('upload') }}" class='left-item'>Upload</a>
+	<a href="/" class='center-item'>Home</a>
 	<a href="{{ route('my') }}" class='right-item'>My</a>
 </header>
 <div class='under-the-grid'></div>
