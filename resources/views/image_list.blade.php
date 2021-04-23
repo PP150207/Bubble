@@ -19,7 +19,7 @@
 <div>
 	@foreach($images as $image)
 		<div class='timeline'>
-			<a href='/list/{{$image->id}}'><img src="{{ Storage::url($image->file_path) }}" id='items'/></a>
+			<a href='/list/{{$image->id}}'><img src="data:image/png;base64,{{ $image->image }}" id='items' /></a>
 			<p>{{ $image->image_title }}</p>
 		</div>
 	@endforeach
