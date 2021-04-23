@@ -17,7 +17,7 @@ use App\Http\Controllers\ContentController;
 |
 */
 
-Route::get('/',[UploadImageController::class, "home"])
+Route::get('/upload',[UploadImageController::class, "home"])
 ->name("home");
 
 Route::get('/home',[ImageListController::class, "home"])
