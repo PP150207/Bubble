@@ -4,32 +4,36 @@ use Illuminate\Http\Request;
 use App\Models\UploadImage;
 class UploadImageController extends Controller
 {
-   function show(){
+    function home(){
+        return view('home');
+    }
+
+   function upload(){
 		return view("upload_form");
 	}
 
-	function upload(Request $request){
+	// function upload(Request $request){
 		
-		$upload_images = $request->file('image');
-		$count_image = 0;
-        // var_dump($upload_images);
-        // var_dump($request->title);
+	// 	$upload_images = $request->file('image');
+	// 	$count_image = 0;
+    //     // var_dump($upload_images);
+    //     // var_dump($request->title);
 
-		foreach($upload_images as $upload_image){
-			$path = $upload_image->store("public");
-			$count_image ++ ;
-			UploadImage::create([
-				"file_name" => $upload_image->getClientOriginalName(),
-				"file_path" => $path,
-				"file_id" => $count_image,
-                "title" => $request->title,
-                "image_title" =>$request->image_title
+	// 	foreach($upload_images as $upload_image){
+	// 		$path = $upload_image->store("public");
+	// 		$count_image ++ ;
+	// 		UploadImage::create([
+	// 			"file_name" => $upload_image->getClientOriginalName(),
+	// 			"file_path" => $path,
+	// 			"file_id" => $count_image,
+    //             "title" => $request->title,
+    //             "image_title" =>$request->image_title
 
-			]);
-		}
+	// 		]);
+	// 	}
 		
-		return redirect("/list");
-	}
+	// 	return redirect("/list");
+	// }
 	function encode(Request $request){
 		
 		$upload_images = $request->file('image');

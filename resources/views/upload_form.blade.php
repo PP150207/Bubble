@@ -11,8 +11,8 @@
 
 <header class='titlebar'>
 	<a href='#'class='left-item' id='white'>left</a>
-	<a href="{{ route('home') }}" class='center-item'>Home</a>
-	<a href="{{ route('my') }}" class='right-item'>My</a>
+	<a href='#'class='left-item' id='white'>Center</a>
+	<a href="{{ route('home') }}" class='right-item'>Home</a>
 </header>
 <div class='under-the-grid'></div>
 
@@ -29,7 +29,7 @@
 	<div class='space'></div>
 	<form 
 		method="post"
-		action="{{ route('encode_image') }}"
+		action="{{ route('encode') }}"
 		enctype="multipart/form-data"
 	>
 		@csrf

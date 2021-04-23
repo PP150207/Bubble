@@ -51,7 +51,7 @@ class ContentController extends Controller
             }
         }
 
-        return redirect('/home');
+        return redirect('/');
 
     }
 }
