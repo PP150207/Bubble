@@ -40,14 +40,14 @@ class UploadImageController extends Controller
 		foreach($upload_images as $upload_image){
 			$path = $upload_image->store("public");
 			$count_image ++ ;
-            $enocode_file = base64_encode(file_get_contents($upload_image));
+            $encode_file = base64_encode(file_get_contents($upload_image));
 			UploadImage::create([
                 "file_name" => $upload_image->getClientOriginalName(),
 				"file_path" => $path,
 				"file_id" => $count_image,
                 "title" => $request->title,
                 "image_title" =>$request->image_title,
-                "image" => $enocode_file
+                "image" => $encode_file
 			]);
 		}
 		
