@@ -15,8 +15,8 @@ class ContentController extends Controller
     }
 
     function edit_contents(Request $request){
-        Edit::where('created_at', $request->created_at)->update(['title'=> $request->title]);
-        Edit::where('created_at', $request->created_at)->update(['image_title'=> $request->image_title]);
+        Edit::where('created_at', $request->created_at)->update(['subtitle'=> $request->title]);
+        Edit::where('created_at', $request->created_at)->update(['title'=> $request->image_title]);
 
         $return_id =  Edit::where('created_at', $request->created_at)->first();
         // var_dump($return_id->id);
@@ -38,15 +38,10 @@ class ContentController extends Controller
         if($cnt <= 1) {
             $value = $delete::where('created_at', $delete_create_time)->first();
             $value->delete();
-            $delete_file_path = $value->file_path;
-            Storage::delete("public/$delete_file_path");
         }elseif($cnt>1){
             
             $values = $delete::where('created_at', $delete_create_time)->get();
             foreach($values as $value) {
-                $delete_file_path = $value->file_path;
-                // var_dump($delete_file_path);
-                Storage::delete("public/$delete_file_path");
                 $value->delete();
             }
         }

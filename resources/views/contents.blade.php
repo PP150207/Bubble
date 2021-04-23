@@ -11,7 +11,7 @@
 	<div class='top-wrapper'>
 		<div class='title-content'>
 			@foreach($contents as $content)
-			<h1><a href='/'>{{ $content->image_title }}</a></h1>
+			<h1><a href='/'>{{ $content->title }}</a></h1>
 			@break
 			@endforeach
 		</div>	
@@ -24,7 +24,7 @@
 			@endforeach
 		</div>
 		<div>
-			<p><a href='/edit/{{$content->created_at}}'>{{ $content->title }}</a></p>
+			<p><a href='/edit/{{$content->created_at}}'>{{ $content->subtitle }}</a></p>
 		</div>
 
 	</div>

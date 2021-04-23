@@ -34,12 +34,12 @@
 	>
 		@csrf
 	<div class='form-flex'>
-		<textarea type='text' name="image_title" class='upload-title' wrap='soft' required></textarea>
-		<label><input type="file" name="image[]" accept="image/png, image/jpeg" multiple class='upload-file'></label>
+		<textarea type='text' name="title" class='upload-title' wrap='soft' required></textarea>
+		<label><input type="file" name="image[]" accept="image/png, image/jpeg" multiple class='upload-file' required></label>
 	</div>
 </div>
 	<div>
-		<textarea name='title' class='upload-subtitle' rows='1' required></textarea>
+		<textarea name='subtitle' class='upload-subtitle' rows='1' required></textarea>
 		<input type="submit" value="送信するます。" class='upload-submit'>
 	</div>
 	</form>
