@@ -16,7 +16,7 @@ class UploadImageController extends Controller
         // var_dump($request->title);
 
 		foreach($upload_images as $upload_image){
-			$path = $upload_image->store('uploads',"public");
+			$path = $upload_image->store("public");
 			$count_image ++ ;
 			UploadImage::create([
 				"file_name" => $upload_image->getClientOriginalName(),
