@@ -20,7 +20,7 @@
 	@foreach($images as $image)
 		<div>
 			<a href='/list/{{$image->id}}'><img src="data:image/png;base64,{{ $image->image }}" /></a>
-			<p class='grid-title'>{{ $image->image_title }}</p>
+			<p class='grid-title'>{{ $image->title }}</p>
 		</div>
 	@endforeach
 </div>

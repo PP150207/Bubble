@@ -17,7 +17,7 @@
 	enctype="multipart/form-data"
 >
 	@csrf
-	<textarea type=text name='image_title' class='edit-title' rows='2' cols='10'>{{ $image->image_title }}</textarea>
+	<textarea type=text name='image_title' class='edit-title' rows='2' cols='10'>{{ $image->title }}</textarea>
     <div class='top-content'>
         @foreach($images as $image)
         <div>
@@ -26,7 +26,7 @@
         </div>
         @endforeach
     </div>
-    <textarea name='title' class='edit-subtitle' rows='3' cols='20'>{{ $image->title }}</textarea>
+    <textarea name='title' class='edit-subtitle' rows='3' cols='20'>{{ $image->subtitle }}</textarea>
 	<div class='edit-submit'>
         <input type='hidden' name='created_at' value='{{ $image->created_at }}'>
         <input type="submit" value="編集" class='edit-submit'>

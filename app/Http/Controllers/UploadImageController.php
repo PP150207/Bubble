@@ -39,23 +39,20 @@ class UploadImageController extends Controller
 		$upload_images = $request->file('image');
 		$count_image = 0;
         // var_dump($upload_images);
-        // var_dump($request->title);
+        // var_dump($request->subtitle);
 
 		foreach($upload_images as $upload_image){
-			$path = $upload_image->store("public");
 			$count_image ++ ;
             $encode_file = base64_encode(file_get_contents($upload_image));
 			UploadImage::create([
-                "file_name" => $upload_image->getClientOriginalName(),
-				"file_path" => $path,
 				"file_id" => $count_image,
-                "title" => $request->title,
-                "image_title" =>$request->image_title,
+                "subtitle" => $request->subtitle,
+                "title" =>$request->title,
                 "image" => $encode_file
 			]);
 		}
 		
-		return redirect("/list");
+		return redirect("/");
 	}
 
 	
