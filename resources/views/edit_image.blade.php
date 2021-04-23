@@ -22,7 +22,7 @@
         @foreach($images as $image)
         <div>
             <div class='content-list'></div>
-            <img src="{{ Storage::url($image->file_path) }}"  id='edit-item'/>	
+            <img src="data:image/png;base64,{{ $image->image }}"  id='edit-item'/>	
         </div>
         @endforeach
     </div>

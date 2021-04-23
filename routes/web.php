@@ -17,8 +17,8 @@ use App\Http\Controllers\ContentController;
 |
 */
 
-Route::get('/',[UploadImageController::class, "show"])
-->name("upload_form");
+Route::get('/',[UploadImageController::class, "home"])
+->name("home");
 
 Route::get('/home',[ImageListController::class, "home"])
 ->name("home");
@@ -26,6 +26,7 @@ Route::get('/home',[ImageListController::class, "home"])
 // Route::post('/upload', [UploadImageController::class, "upload"])
 // ->name("upload_image");
 
+// 画像の保存方法をstorage配下->encodeしてDBに変更
 Route::post('/upload', [UploadImageController::class, "encode"])
 ->name("encode_image");
 
