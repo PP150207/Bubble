@@ -29,7 +29,7 @@
 	<div class='space'></div>
 	<form 
 		method="post"
-		action="{{ route('upload_image') }}"
+		action="{{ route('encode_image') }}"
 		enctype="multipart/form-data"
 	>
 		@csrf

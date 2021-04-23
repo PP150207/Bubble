@@ -23,8 +23,11 @@ Route::get('/',[UploadImageController::class, "show"])
 Route::get('/home',[ImageListController::class, "home"])
 ->name("home");
 
-Route::post('/upload', [UploadImageController::class, "upload"])
-->name("upload_image");
+// Route::post('/upload', [UploadImageController::class, "upload"])
+// ->name("upload_image");
+
+Route::post('/upload', [UploadImageController::class, "encode"])
+->name("encode_image");
 
 Route::get('/list', [ImageListController::class, "index"])
 ->name("image_list");
