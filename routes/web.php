@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\UploadImageController;
+use App\Http\Controllers\ImageListController;
+use App\Http\Controllers\ContentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,31 +17,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[App\Http\Controllers\UploadImageController::class, "show"])
+Route::get('/',[UploadImageController::class, "show"])
 ->name("upload_form");
 
-Route::get('/home',[App\Http\Controllers\ImageListController::class, "home"])
+Route::get('/home',[ImageListController::class, "home"])
 ->name("home");
 
-Route::post('/upload', [App\Http\Controllers\UploadImageController::class, "upload"])
-->name("upload_image");
+// Route::post('/upload', [UploadImageController::class, "upload"])
+// ->name("upload_image");
 
-Route::get('/list', [App\Http\Controllers\ImageListController::class, "index"])
+Route::post('/upload', [UploadImageController::class, "encode"])
+->name("encode_image");
+
+Route::get('/list', [ImageListController::class, "index"])
 ->name("image_list");
 
-Route::get('/list/{id}',[App\Http\Controllers\UploadImageController::class, "contentview"])
+Route::get('/list/{id}',[UploadImageController::class, "contentview"])
 ->name('contents_view');
 
-Route::post('/delete', [App\Http\Controllers\ContentController::class, "delete"])
+Route::post('/delete', [ContentController::class, "delete"])
 ->name('delete');
 
-Route::post('/editcontens', [App\Http\Controllers\ContentController::class, "edit_contents"])
+Route::post('/editcontens', [ContentController::class, "edit_contents"])
 ->name('edit_contents');
 
-Route::get('/edit/{created_at}', [App\Http\Controllers\ContentController::class, "edit"])
+Route::get('/edit/{created_at}', [ContentController::class, "edit"])
 ->name('edit');
 
-Route::get('/my',[App\Http\Controllers\UploadImageController::class, "my"])
+Route::get('/my',[UploadImageController::class, "my"])
 ->name("my");
 
 

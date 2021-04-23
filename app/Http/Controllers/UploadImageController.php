@@ -30,6 +30,31 @@ class UploadImageController extends Controller
 		
 		return redirect("/list");
 	}
+	function encode(Request $request){
+		
+		$upload_images = $request->file('image');
+		$count_image = 0;
+        // var_dump($upload_images);
+        // var_dump($request->title);
+
+		foreach($upload_images as $upload_image){
+			$path = $upload_image->store("public");
+			$count_image ++ ;
+            $enocode_file = base64_encode(file_get_contents($upload_image));
+			UploadImage::create([
+                "file_name" => $upload_image->getClientOriginalName(),
+				"file_path" => $path,
+				"file_id" => $count_image,
+                "title" => $request->title,
+                "image_title" =>$request->image_title,
+                "image" => $enocode_file
+			]);
+		}
+		
+		return redirect("/list");
+	}
+
+	
 
     function contentview($id) {
         $createtimes = UploadImage::select("created_at")->where("id", $id)->get();

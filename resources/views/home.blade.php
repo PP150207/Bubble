@@ -19,7 +19,7 @@
 <div class='grid'>
 	@foreach($images as $image)
 		<div>
-			<a href='/list/{{$image->id}}'><img src="{{ Storage::url($image->file_path) }}" /></a>
+			<a href='/list/{{$image->id}}'><img src="data:image/png;base64,{{ $image->image }}" /></a>
 			<p class='grid-title'>{{ $image->image_title }}</p>
 		</div>
 	@endforeach
